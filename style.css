@@ -1,0 +1,153 @@
+/* ตั้งค่าพื้นฐาน */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8f4f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* การตั้งค่าหัวข้อ */
+h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* ฟอร์ม */
+form {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+form:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #3be735;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* ตารางแสดงข้อมูลสินค้า */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    text-align: left;
+    padding: 12px;
+}
+
+table th {
+    background-color: #3498db;
+    color: white;
+    font-weight: 600;
+}
+
+table tr:nth-child(even) {
+    background-color: #f4f6f7;
+}
+
+table tr:hover {
+    background-color: #ecf0f1;
+}
+
+table td {
+    font-size: 14px;
+}
+
+/* การแสดงข้อมูลเพิ่มเติม */
+#productListDisplay, #lowStockDisplay, #salesReportDisplay {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #ecf0f1;
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+ul li:hover {
+    transform: translateX(5px);
+    background-color: #dcdfe1;
+}
+
+.no-data {
+    text-align: center;
+    font-size: 18px;
+    color: #bdc3c7;
+}
+
+/* การจัดตำแหน่งของข้อมูล */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* ปรับขนาดสำหรับมือถือ */
+@media screen and (max-width: 600px) {
+    form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
