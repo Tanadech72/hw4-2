@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบจัดการคลังสินค้า</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ระบบจัดการคลังสินค้า</h1>
+
+    <!-- ฟอร์มเพิ่มสินค้า -->
+    <h2>เพิ่มสินค้า</h2>
+    <form id="addProductForm">
+        <input type="text" id="name" placeholder="ชื่อสินค้า" required>
+        <input type="number" id="price" placeholder="ราคา" required>
+        <input type="number" id="inStock" placeholder="จำนวนคงเหลือ" required>
+
+        <label for="category">ประเภทสินค้า</label>
+        <select id="category" required>
+            <option value="" disabled selected>กรุณาเลือกประเภทสินค้า</option>
+            <option value="electronics">อิเล็กทรอนิกส์</option>
+            <option value="clothing">เสื้อผ้า</option>
+            <option value="food">อาหาร</option>
+            <option value="furniture">เฟอร์นิเจอร์</option>
+            <option value="beauty">ความงาม</option>
+        </select>
+        
+        <button type="submit">เพิ่มสินค้า</button>
+    </form>
+
+    <!-- ฟอร์มเพิ่มจำนวนสินค้า -->
+    <h2>เพิ่มจำนวนสินค้า</h2>
+    <form id="updateStockForm">
+        <input type="text" id="productIdToUpdate" placeholder="รหัสสินค้า" required>
+        <input type="number" id="quantityToAdd" placeholder="จำนวนที่จะเพิ่ม" required>
+        <button type="submit">เพิ่มจำนวนสินค้า</button>
+    </form>
+
+    <!-- ฟอร์มบันทึกการขาย -->
+    <h2>บันทึกการขาย</h2>
+    <form id="saleForm">
+        <input type="text" id="productIdToSell" placeholder="รหัสสินค้า" required>
+        <input type="number" id="quantityToSell" placeholder="จำนวนที่จะขาย" required>
+        <button type="submit">บันทึกการขาย</button>
+    </form>
+
+    <!-- แสดงรายการสินค้าทั้งหมด -->
+    <h2>รายการสินค้าทั้งหมด</h2>
+    <div id="productListDisplay"></div>  <!-- แสดงรายการสินค้า -->
+
+    <!-- แสดงรหัสสินค้าพร้อมชื่อสินค้า -->
+    <h2>รหัสสินค้าของสินค้าที่เพิ่มใหม่</h2>
+    <div id="productIdDisplay"></div>  <!-- แสดงรหัสสินค้าและชื่อสินค้า -->
+
+    <!-- ฟอร์มตรวจสอบสินค้าที่ใกล้หมด -->
+<h2>ตรวจสอบสินค้าที่ใกล้หมด</h2>
+<form id="checkLowStockForm">
+    <input type="number" id="minStockToCheck" placeholder="กรุณาระบุจำนวนต่ำสุด" required>
+    <button type="submit">ตรวจสอบสินค้าใกล้หมด</button>
+</form>
+
+<!-- แสดงสินค้าที่ใกล้หมด -->
+<div id="lowStockDisplay"></div>
+
+    <!-- แสดงสินค้าขายดี -->
+    <h2>สินค้าขายดี</h2>
+    <div id="salesReportDisplay"></div>  <!-- แสดงรายงานสินค้าขายดี -->
+
+    <script src="script.js"></script>
+</body>
+</html>
